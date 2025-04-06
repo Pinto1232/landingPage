@@ -12,25 +12,45 @@
     <style>
         @media (max-width: 768px) {
 
+            /* Hero section styling for mobile */
+            .hero {
+                min-height: 80vh;
+                background-position: center center;
+                background-size: cover;
+                padding: 100px 0 60px;
+            }
+
+            .hero::before {
+                opacity: 0.7;
+                /* Increase overlay opacity on mobile for better text readability */
+            }
+
             /* Hero content styling */
             .hero-content {
                 text-align: center;
+                padding: 0 15px;
+                margin-top: 20px;
             }
 
             .hero-content h1 {
                 font-size: 2.2rem;
                 margin-left: auto;
                 margin-right: auto;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                /* Add text shadow for better visibility */
             }
 
             .hero-content p {
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 90%;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                /* Add text shadow for better visibility */
             }
 
             .hero-buttons {
                 justify-content: center;
+                margin-top: 25px;
             }
 
             /* Mobile Navigation Menu */
