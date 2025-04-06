@@ -279,12 +279,6 @@ function createPagination() {
     });
 }
 
-// Initialize services and pagination
-document.addEventListener("DOMContentLoaded", () => {
-  renderServices();
-  createPagination();
-});
-
 // Language translations
 const translations = {
   en: {
@@ -338,33 +332,46 @@ function updateContent(lang) {
   });
 }
 
+// Function to update language display
+function updateLanguageDisplay(selectedLang) {
+  const currentLanguageImg = document.querySelector(
+    ".current-language .flag-icon"
+  );
+  const currentLanguageText = document.querySelector(
+    ".current-language .language-text"
+  );
+
+  if (selectedLang === "en") {
+    currentLanguageImg.src = "images/sout-africa.jpg";
+    currentLanguageText.textContent = "EN";
+  } else if (selectedLang === "pt") {
+    currentLanguageImg.src = "images/Flag_of_Angola.svg.png";
+    currentLanguageText.textContent = "PT";
+  }
+}
+
 // Function to handle language switch
 function handleLanguageSwitch() {
-  const languageLinks = document.querySelectorAll(".language-dropdown a");
-  if (languageLinks.length === 0) return; // Exit if no language links found
-
-  const currentLanguageElement = document.querySelector(
-    ".current-language span"
-  );
-  if (!currentLanguageElement) return; // Exit if language display element not found
-
-  languageLinks.forEach((link) => {
+  // Attach event listeners to all language dropdown links (both in mobile and desktop)
+  document.querySelectorAll(".language-dropdown a").forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const lang = link.getAttribute("data-lang");
 
-      // Update current language display
-      currentLanguageElement.textContent = lang.toUpperCase();
-      const flagIcon = currentLanguageElement.previousElementSibling;
-      if (flagIcon) {
-        flagIcon.src = `images/flags/${lang}.png`;
-      }
+      // Update language display
+      updateLanguageDisplay(lang);
 
       // Update content
       updateContent(lang);
 
       // Store language preference
       localStorage.setItem("preferredLanguage", lang);
+
+      // Close any open mobile menu if on mobile
+      const navLinks = document.getElementById("nav-links");
+      if (navLinks && window.innerWidth <= 768) {
+        navLinks.classList.remove("active");
+      }
     });
   });
 }
@@ -374,23 +381,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Check for saved language preference
   const savedLang = localStorage.getItem("preferredLanguage") || "en";
 
-  // Only run language functions if the language selector exists
-  const currentLanguageElement = document.querySelector(
-    ".current-language span"
-  );
-  if (currentLanguageElement) {
-    // Update content
+  // Only proceed if we have language elements on the page
+  if (document.querySelector(".language-dropdown")) {
+    // Update content with the saved language
     updateContent(savedLang);
 
     // Set initial language display
-    currentLanguageElement.textContent = savedLang.toUpperCase();
+    updateLanguageDisplay(savedLang);
 
-    const flagIcon = currentLanguageElement.previousElementSibling;
-    if (flagIcon) {
-      flagIcon.src = `images/flags/${savedLang}.png`;
-    }
-
-    // Initialize language switch handler
+    // Initialize language switch handlers
     handleLanguageSwitch();
   }
 
