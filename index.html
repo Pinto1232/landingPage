@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABOIL ENERGY - Leading Petroleum Industry Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @media (max-width: 768px) {
+
+            /* Hero content styling */
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 90%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            /* Mobile Navigation Menu */
+            /* Top Navbar with Logo and Hamburger */
+            .navbar .container {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .navbar .container::before {
+                content: '';
+                display: block;
+                height: 60px;
+                /* Space for the top bar */
+            }
+
+            /* Create a flex container for logo and menu toggle */
+            .navbar::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            /* Position the logo and hamburger in a flex container */
+            .navbar .logo-menu-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 15px;
+                background: white;
+                z-index: 1001;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Add the container in JavaScript */
+            .navbar .logo {
+                font-size: 22px;
+            }
+
+            .navbar .menu-toggle {
+                font-size: 24px;
+                cursor: pointer;
+                padding: 5px;
+            }
+
+            /* Grid layout for menu items */
+            .nav-links {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                padding: 15px !important;
+                gap: 10px;
+                background-color: white;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .nav-links li {
+                margin: 0 !important;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .nav-links a {
+                padding: 10px 5px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.95rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                color: #333;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                color: #FF6B35;
+                font-weight: 600;
+            }
+
+            /* Place language selector at the end of the grid */
+            .language-selector {
+                grid-column: span 4;
+                margin-top: 10px;
+            }
+
+            /* Modern flag styling for mobile */
+            .language-selector {
+                display: flex;
+                align-items: center;
+                margin: 15px auto;
+                position: relative;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 30px;
+                padding: 5px 15px;
+                width: fit-content;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+            }
+
+            .current-language {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                padding: 5px;
+            }
+
+            .flag-icon {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                object-fit: cover;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                border: 2px solid white;
+                transition: transform 0.3s ease;
+            }
+
+            .language-text {
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .language-dropdown {
+                position: absolute;
+                top: 105%;
+                left: 0;
+                width: 100%;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                z-index: 1000;
+                overflow: hidden;
+            }
+
+            .language-selector:hover .language-dropdown,
+            .language-selector:focus .language-dropdown,
+            .language-selector:active .language-dropdown {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .language-dropdown li {
+                margin: 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .language-dropdown li:last-child {
+                border-bottom: none;
+            }
+
+            .language-dropdown a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 15px;
+                transition: background 0.3s ease;
+            }
+
+            .language-dropdown a:hover,
+            .language-dropdown a:active {
+                background: #f8f8f8;
+            }
+
+            .language-dropdown .flag-icon {
+                width: 24px;
+                height: 24px;
+            }
+
+            .language-dropdown .language-text {
+                color: #333;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Gaboil <span>Energy</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                ☰
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active" data-translate="home">Home</a></li>
+                <li><a href="services.html" data-translate="services">Services</a></li>
+                <li><a href="about.html" data-translate="about">About</a></li>
+                <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                <li class="language-selector">
+                    <div class="current-language">
+                        <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/za.svg" alt="English"
+                            class="flag-icon">
+                        <span class="language-text">EN</span>
+                    </div>
+                    <ul class="language-dropdown">
+                        <li>
+                            <a href="#" data-lang="en">
+                                <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/za.svg" alt="English"
+                                    class="flag-icon">
+                                <span class="language-text">English</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-lang="pt">
+                                <img src="https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/ao.svg"
+                                    alt="Portuguese" class="flag-icon">
+                                <span class="language-text">Português</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-translate="heroTitle">Innovative Solutions for the Petroleum Industry</h1>
+                <p data-translate="heroText">Providing cutting-edge technologies and services to optimize operations,
+                    increase efficiency, and ensure safety in petroleum extraction and processing.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn" data-translate="heroButton1">Our Services</a>
+                    <a href="contact.html" class="btn btn-outline" data-translate="heroButton2">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="servicesTitle">Our Specialized Services</h2>
+                <p data-translate="servicesSubtitle">We provide comprehensive solutions tailored to the unique
+                    challenges of the petroleum industry, delivering excellence at every step of the process.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/drilling.jpg')"></div>
+                    <div class="service-content">
+                        <h3>Drilling Operations</h3>
+                        <p>State-of-the-art drilling technologies and expert personnel to ensure efficient and safe
+                            extraction operations in any environment.</p>
+                        <a href="services.html#drilling" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/maintenance.jpg')"></div>
+                    <div class="service-content">
+                        <h3>Equipment Maintenance</h3>
+                        <p>Comprehensive maintenance services to maximize equipment lifespan, prevent downtime, and
+                            optimize operational efficiency.</p>
+                        <a href="services.html#maintenance" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/environmental.jpg')"></div>
+                    <div class="service-content">
+                        <h3>Environmental Compliance</h3>
+                        <p>Expert guidance and solutions to ensure all operations meet or exceed environmental
+                            regulations while maintaining productivity.</p>
+                        <a href="services.html#environmental" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>25 Years of Excellence in Petroleum Services</h2>
+                    <p>Since our founding in 2000, GABOIL ENERGY has been at the forefront of innovation in the
+                        petroleum industry. Our team of highly skilled engineers, technicians, and industry experts work
+                        tirelessly to provide solutions that drive efficiency and sustainability.</p>
+                    <p>We pride ourselves on our commitment to safety, environmental responsibility, and technological
+                        advancement. Our global presence enables us to serve clients across multiple continents,
+                        providing localized expertise with global standards.</p>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-number" id="clients-count">250+</div>
+                            <div class="stat-text">Global Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="projects-count">1500+</div>
+                            <div class="stat-text">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" id="experts-count">120+</div>
+                            <div class="stat-text">Industry Experts</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from our satisfied clients about their experience working with GABOIL ENERGY</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"GABOIL ENERGY's expertise in drilling operations has significantly improved our efficiency
+                            and safety standards. Their team's dedication to excellence is unmatched."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image" style="background-image: url('images/testimonial1.jpg')"></div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Operations Manager, Global Oil Co.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The environmental compliance solutions provided by GABOIL ENERGY have helped us maintain our
+                            sustainability goals while optimizing our operations. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image" style="background-image: url('images/testimonial2.jpg')"></div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Environmental Director, EcoPetrol</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Their equipment maintenance services have reduced our downtime by 40% and significantly
+                            improved our operational efficiency. A true partner in our success."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image" style="background-image: url('images/testimonial3.jpg')"></div>
+                        <div class="author-info">
+                            <h4>James Wilson</h4>
+                            <p>Technical Director, PetroMax</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Trusted Partners</h2>
+                <p>We work with leading companies in the petroleum industry</p>
+            </div>
+            <div class="partners-slider">
+                <div class="partners-track">
+                    <div class="partner-logo">
+                        <img src="images/partner1.png" alt="Global Oil Co.">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner2.png" alt="EcoPetrol">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner3.png" alt="PetroMax">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner4.png" alt="Energy Solutions">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner5.png" alt="OilTech">
+                    </div>
+                    <!-- Duplicate logos for infinite scroll effect -->
+                    <div class="partner-logo">
+                        <img src="images/partner1.png" alt="Global Oil Co.">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner2.png" alt="EcoPetrol">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner3.png" alt="PetroMax">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner4.png" alt="Energy Solutions">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/partner5.png" alt="OilTech">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest News & Updates</h2>
+                <p>Stay informed about our latest achievements and industry developments</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('images/news1.jpg')"></div>
+                    <div class="news-content">
+                        <div class="news-date">March 15, 2025</div>
+                        <h3>New Environmental Compliance Initiative</h3>
+                        <p>GABOIL ENERGY launches innovative program to help clients achieve carbon neutrality goals...
+                        </p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('images/news2.jpg')"></div>
+                    <div class="news-content">
+                        <div class="news-date">March 10, 2025</div>
+                        <h3>Advanced Drilling Technology Partnership</h3>
+                        <p>We announce strategic partnership with leading technology provider to enhance drilling
+                            operations...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('images/news3.jpg')"></div>
+                    <div class="news-content">
+                        <div class="news-date">March 5, 2025</div>
+                        <h3>Safety Training Program Expansion</h3>
+                        <p>Our award-winning safety training program expands to three new international locations...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Operations?</h2>
+                <p>Contact us today to discuss how our services can benefit your organization</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                    <a href="services.html" class="btn btn-outline">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GABOIL ENERGY</h3>
+                    <p>Leading provider of innovative solutions for the petroleum industry, committed to excellence,
+                        safety, and sustainability.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">ig</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#drilling">Drilling Operations</a></li>
+                        <li><a href="services.html#maintenance">Equipment Maintenance</a></li>
+                        <li><a href="services.html#environmental">Environmental Compliance</a></li>
+                        <li><a href="services.html#safety">Safety Training</a></li>
+                        <li><a href="services.html#consulting">Consulting Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>123 Oil Avenue, Houston, TX</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>info@gaboilenergy.com</li>
+                        <li>Mon-Fri: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GABOIL ENERGY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
