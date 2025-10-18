@@ -236,10 +236,10 @@
                 ☰
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="index.html" data-translate="home">Home</a></li>
+                <li><a href="services.html" data-translate="services">Services</a></li>
+                <li><a href="about.html" data-translate="about">About</a></li>
+                <li><a href="contact.html" class="active" data-translate="contact">Contact</a></li>
                 <li class="language-selector">
                     <div class="current-language">
                         <img src="images/sout-africa.jpg" alt="English" class="flag-icon">
@@ -267,8 +267,8 @@
     <!-- Contact Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team of experts</p>
+            <h1 data-translate="contactPageTitle">Contact Us</h1>
+            <p data-translate="contactPageSubtitle">Get in touch with our team of experts</p>
         </div>
     </section>
 
@@ -278,22 +278,22 @@
             <div class="contact-grid">
                 <div class="contact-card">
                     <div class="contact-icon">📍</div>
-                    <h3>Visit Us</h3>
+                    <h3 data-translate="visitUs">Visit Us</h3>
                     <p>123 Oil Avenue<br>Houston, TX 77002<br>United States</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">📞</div>
-                    <h3>Call Us</h3>
-                    <p>Main Office: +1 (555) 123-4567<br>Support: +1 (555) 987-6543</p>
+                    <h3 data-translate="callUs">Call Us</h3>
+                    <p><span data-translate="mainOffice">Main Office</span>: +1 (555) 123-4567<br><span data-translate="support">Support</span>: +1 (555) 987-6543</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">✉️</div>
-                    <h3>Email Us</h3>
-                    <p>General Inquiries:<br>info@gaboilenergy.com<br>Support:<br>support@gaboilenergy.com</p>
+                    <h3 data-translate="emailUs">Email Us</h3>
+                    <p><span data-translate="generalInquiries">General Inquiries</span>:<br>info@gaboilenergy.com<br><span data-translate="support">Support</span>:<br>support@gaboilenergy.com</p>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">🕒</div>
-                    <h3>Office Hours</h3>
+                    <h3 data-translate="officeHours">Office Hours</h3>
                     <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
                 </div>
             </div>
@@ -305,49 +305,49 @@
         <div class="container">
             <div class="contact-form-container">
                 <div class="form-header">
-                    <h2>Send Us a Message</h2>
-                    <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                    <h2 data-translate="sendMessage">Send Us a Message</h2>
+                    <p data-translate="sendMessageDesc">Fill out the form below and our team will get back to you within 24 hours.</p>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Your Name</label>
+                                <label for="name" data-translate="yourName">Your Name</label>
                                 <input type="text" id="name" class="form-control" placeholder="John Doe" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Your Email</label>
+                                <label for="email" data-translate="yourEmail">Your Email</label>
                                 <input type="email" id="email" class="form-control" placeholder="john@example.com"
                                     required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone" data-translate="phoneNumber">Phone Number</label>
                             <input type="tel" id="phone" class="form-control" placeholder="+1 (555) 123-4567">
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
+                            <label for="subject" data-translate="subject">Subject</label>
                             <input type="text" id="subject" class="form-control" placeholder="How can we help you?">
                         </div>
                         <div class="form-group">
-                            <label for="service">Service of Interest</label>
+                            <label for="service" data-translate="serviceOfInterest">Service of Interest</label>
                             <select id="service" class="form-control">
-                                <option value="">Select a Service</option>
-                                <option value="drilling">Drilling Operations</option>
-                                <option value="maintenance">Equipment Maintenance</option>
-                                <option value="environmental">Environmental Compliance</option>
-                                <option value="safety">Safety Training</option>
-                                <option value="consulting">Technical Consulting</option>
-                                <option value="other">Other</option>
+                                <option value="" data-translate="selectService">Select a Service</option>
+                                <option value="drilling" data-translate="drillingOps">Drilling Operations</option>
+                                <option value="maintenance" data-translate="equipmentMaint">Equipment Maintenance</option>
+                                <option value="environmental" data-translate="envCompliance">Environmental Compliance</option>
+                                <option value="safety" data-translate="safetyTraining">Safety Training</option>
+                                <option value="consulting" data-translate="technicalConsulting">Technical Consulting</option>
+                                <option value="other" data-translate="other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Your Message</label>
+                            <label for="message" data-translate="yourMessage">Your Message</label>
                             <textarea id="message" class="form-control"
                                 placeholder="Provide details about your inquiry..." required></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn">Send Message</button>
+                            <button type="submit" class="btn" data-translate="sendMessageBtn">Send Message</button>
                         </div>
                     </form>
                 </div>
@@ -371,8 +371,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>GABOIL ENERGY</h3>
-                    <p>Leading provider of innovative solutions for the petroleum industry, committed to excellence,
+                    <h3 data-translate="footerCompanyName">GABOIL ENERGY</h3>
+                    <p data-translate="footerDesc">Leading provider of innovative solutions for the petroleum industry, committed to excellence,
                         safety, and sustainability.</p>
                     <div class="social-icons">
                         <a href="#" class="social-icon">f</a>
@@ -382,41 +382,42 @@
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3 data-translate="quickLinks">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html" data-translate="footerHome">Home</a></li>
+                        <li><a href="services.html" data-translate="services">Services</a></li>
+                        <li><a href="about.html" data-translate="footerAboutUs">About Us</a></li>
+                        <li><a href="contact.html" data-translate="contact">Contact</a></li>
+                        <li><a href="#" data-translate="careers">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Services</h3>
+                    <h3 data-translate="footerServices">Services</h3>
                     <ul class="footer-links">
-                        <li><a href="services.html#drilling">Drilling Operations</a></li>
-                        <li><a href="services.html#maintenance">Equipment Maintenance</a></li>
-                        <li><a href="services.html#environmental">Environmental Compliance</a></li>
-                        <li><a href="services.html#safety">Safety Training</a></li>
-                        <li><a href="services.html#consulting">Consulting Services</a></li>
+                        <li><a href="services.html#drilling" data-translate="footerDrillingOps">Drilling Operations</a></li>
+                        <li><a href="services.html#maintenance" data-translate="footerEquipmentMaint">Equipment Maintenance</a></li>
+                        <li><a href="services.html#environmental" data-translate="footerEnvCompliance">Environmental Compliance</a></li>
+                        <li><a href="services.html#safety" data-translate="footerSafetyTraining">Safety Training</a></li>
+                        <li><a href="services.html#consulting" data-translate="footerConsulting">Consulting Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Contact Info</h3>
+                    <h3 data-translate="footerContact">Contact Info</h3>
                     <ul class="footer-links">
-                        <li>123 Oil Avenue, Houston, TX</li>
-                        <li>+1 (555) 123-4567</li>
-                        <li>info@gaboilenergy.com</li>
-                        <li>Mon-Fri: 8:00 AM - 6:00 PM</li>
+                        <li data-translate="footerAddress">123 Oil Avenue, Houston, TX</li>
+                        <li data-translate="footerPhone">+1 (555) 123-4567</li>
+                        <li data-translate="footerEmail">info@gaboilenergy.com</li>
+                        <li data-translate="footerHours">Mon-Fri: 8:00 AM - 6:00 PM</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GABOIL ENERGY. All Rights Reserved.</p>
+                <p data-translate="copyright">&copy; 2025 GABOIL ENERGY. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 

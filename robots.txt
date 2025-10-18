@@ -1,0 +1,29 @@
+# robots.txt for GABOIL ENERGY
+# This file tells search engines which pages to crawl and which to avoid
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow private or duplicate pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Specify sitemap location
+Sitemap: https://gaboilenergy.com/sitemap.xml
+
+# Crawl delay (optional - adjust based on server capacity)
+# Crawl-delay: 1
+
+# Request rate (optional)
+# Request-rate: 1/10
+
