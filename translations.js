@@ -212,6 +212,7 @@ const translations = {
     yourEmail: "Your Email",
     phoneNumber: "Phone Number",
     subject: "Subject",
+    subjectPlaceholder: "How can we help you?",
     serviceOfInterest: "Service of Interest",
     selectService: "Select a Service",
     drillingOps: "Drilling Operations",
@@ -463,6 +464,7 @@ const translations = {
     yourEmail: "Seu Email",
     phoneNumber: "Número de Telefone",
     subject: "Assunto",
+    subjectPlaceholder: "Como podemos ajudá-lo?",
     serviceOfInterest: "Serviço de Interesse",
     selectService: "Selecione um Serviço",
     drillingOps: "Operações de Perfuração",
@@ -545,6 +547,15 @@ function translatePage() {
     const key = element.getAttribute("data-translate");
     if (translations[currentLang][key]) {
       element.textContent = translations[currentLang][key];
+    }
+  });
+
+  // Handle placeholder translations
+  const placeholderElements = document.querySelectorAll("[data-translate-placeholder]");
+  placeholderElements.forEach((element) => {
+    const key = element.getAttribute("data-translate-placeholder");
+    if (translations[currentLang][key]) {
+      element.placeholder = translations[currentLang][key];
     }
   });
 }
