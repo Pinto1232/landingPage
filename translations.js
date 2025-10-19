@@ -499,7 +499,7 @@ const translations = {
 };
 
 // Current language
-let currentLang = "en";
+let currentLang = "pt";
 
 // Function to change language
 function changeLanguage(lang) {
