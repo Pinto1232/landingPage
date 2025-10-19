@@ -528,7 +528,7 @@ function changeLanguage(lang) {
   );
   if (currentLangImg) {
     if (lang === "en") {
-      currentLangImg.src = "images/south-africa.jpg";
+      currentLangImg.src = "images/sout-africa.jpg";
       currentLangImg.alt = "English";
     } else if (lang === "pt") {
       currentLangImg.src = "images/Flag_of_Angola.svg.png";
@@ -584,7 +584,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (currentLangImg) {
     if (currentLang === "en") {
-      currentLangImg.src = "images/south-africa.jpg";
+      currentLangImg.src = "images/sout-africa.jpg";
       currentLangImg.alt = "English";
     } else if (currentLang === "pt") {
       currentLangImg.src = "images/Flag_of_Angola.svg.png";
