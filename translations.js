@@ -92,7 +92,7 @@ const translations = {
     news3Title: "Safety Training Program Expansion",
     news3Text:
       "Our award-winning safety training program expands to three new international locations...",
-    readMore: "Read More →",
+    readMore: "Read More",
 
     // CTA Section
     ctaTitle: "Ready to Transform Your Operations?",
@@ -200,9 +200,12 @@ const translations = {
     callUs: "Call Us",
     emailUs: "Email Us",
     officeHours: "Office Hours",
+    businessHours: "Business Hours",
     mainOffice: "Main Office",
     support: "Support",
     generalInquiries: "General Inquiries",
+    visitUsDays: "Monday to Friday",
+    visitUsTime: "8:00 AM - 6:00 PM",
     sendMessage: "Send Us a Message",
     sendMessageDesc: "Fill out the form below and our team will get back to you within 24 hours.",
     yourName: "Your Name",
@@ -243,8 +246,8 @@ const translations = {
     footerWellIntegrity: "Well Integrity & Inspection",
 
     // Footer - Contact Info
-    footerAddress: "123 Oil Avenue, Houston, TX",
-    footerPhone: "+1 (555) 123-4567",
+    footerAddress: "Luanda - Angola",
+    footerPhone: "+244 222 123 456",
     footerEmail: "info@gaboilenergy.com",
     footerHours: "Mon-Fri: 8:00 AM - 6:00 PM",
   },
@@ -340,7 +343,7 @@ const translations = {
     news3Title: "Expansão do Programa de Treinamento de Segurança",
     news3Text:
       "Nosso premiado programa de treinamento de segurança se expande para três novas localidades internacionais...",
-    readMore: "Leia Mais →",
+    readMore: "Leia Mais",
 
     // CTA Section
     ctaTitle: "Pronto para Transformar Suas Operações?",
@@ -448,9 +451,12 @@ const translations = {
     callUs: "Ligue para Nós",
     emailUs: "Envie um Email",
     officeHours: "Horário de Funcionamento",
+    businessHours: "Horário Comercial",
     mainOffice: "Escritório Principal",
     support: "Suporte",
     generalInquiries: "Consultas Gerais",
+    visitUsDays: "Segunda a Sexta",
+    visitUsTime: "8:00 AM - 6:00 PM",
     sendMessage: "Envie-nos uma Mensagem",
     sendMessageDesc: "Preencha o formulário abaixo e nossa equipe entrará em contato em 24 horas.",
     yourName: "Seu Nome",
@@ -491,8 +497,8 @@ const translations = {
     footerWellIntegrity: "Integridade de Poços e Inspeção",
 
     // Footer - Contact Info
-    footerAddress: "123 Oil Avenue, Houston, TX",
-    footerPhone: "+1 (555) 123-4567",
+    footerAddress: "Luanda - Angola",
+    footerPhone: "+244 222 123 456",
     footerEmail: "info@gaboilenergy.com",
     footerHours: "Seg-Sex: 8:00 AM - 6:00 PM",
   },
@@ -520,7 +526,7 @@ function changeLanguage(lang) {
   );
   if (currentLangImg) {
     if (lang === "en") {
-      currentLangImg.src = "images/sout-africa.jpg";
+      currentLangImg.src = "images/south-africa.jpg";
       currentLangImg.alt = "English";
     } else if (lang === "pt") {
       currentLangImg.src = "images/Flag_of_Angola.svg.png";
@@ -567,7 +573,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   if (currentLangImg) {
     if (currentLang === "en") {
-      currentLangImg.src = "images/sout-africa.jpg";
+      currentLangImg.src = "images/south-africa.jpg";
       currentLangImg.alt = "English";
     } else if (currentLang === "pt") {
       currentLangImg.src = "images/Flag_of_Angola.svg.png";
