@@ -36,86 +36,83 @@
             }
 
             /* Mobile Navigation Menu */
-            /* Top Navbar with Logo and Hamburger */
-            .navbar .container {
-                flex-direction: column;
-                padding: 0;
-            }
-
-            .navbar .container::before {
-                content: '';
-                display: block;
-                height: 60px;
-                /* Space for the top bar */
-            }
-
-            /* Create a flex container for logo and menu toggle */
-            .navbar::after {
-                content: '';
-                display: block;
-                clear: both;
-            }
-
-            /* Position the logo and hamburger in a flex container */
-            .navbar .logo-menu-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            .navbar {
                 position: fixed;
                 top: 0;
                 left: 0;
                 right: 0;
-                padding: 15px;
+                z-index: 1000;
                 background: white;
-                z-index: 1001;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-            /* Add the container in JavaScript */
+            .navbar .container {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                background: white;
+            }
+
             .navbar .logo {
+                display: block !important;
                 font-size: 22px;
             }
 
-            .navbar .menu-toggle {
-                font-size: 24px;
-                cursor: pointer;
-                padding: 5px;
+            .navbar .logo-img {
+                height: 40px;
+                width: auto;
             }
 
-            /* Grid layout for menu items */
+            .navbar .menu-toggle {
+                display: block !important;
+                font-size: 28px;
+                cursor: pointer;
+                padding: 5px 10px;
+                background: none;
+                border: none;
+                color: #333;
+            }
+
+            /* Hide the dynamically created container */
+            .navbar .logo-menu-container {
+                display: none !important;
+            }
+
+            /* Menu items - hidden by default */
             .nav-links {
-                display: grid !important;
-                grid-template-columns: repeat(4, 1fr);
+                position: fixed !important;
+                top: 70px;
+                left: 0;
+                right: 0;
                 width: 100%;
-                padding: 15px !important;
+                padding: 20px !important;
                 gap: 10px;
                 background-color: white;
+                display: none !important;
+                flex-direction: column;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
             }
 
             .nav-links.active {
+                display: flex !important;
                 opacity: 1;
                 visibility: visible;
-                transform: translateY(0);
-                grid-template-columns: repeat(4, 1fr);
             }
 
             .nav-links li {
                 margin: 0 !important;
                 text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                width: 100%;
+                padding: 5px 0;
             }
 
             .nav-links a {
-                padding: 10px 5px;
+                padding: 12px 15px;
                 width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: 0.95rem;
+                display: block;
+                font-size: 1rem;
                 font-weight: 500;
                 transition: all 0.3s ease;
                 color: #333;
@@ -127,13 +124,12 @@
                 font-weight: 600;
             }
 
-            /* Place language selector at the end of the grid */
+            /* Language selector styling for mobile */
             .language-selector {
-                grid-column: span 4;
                 margin-top: 10px;
+                width: 100%;
             }
 
-            /* Modern flag styling for mobile */
             .language-selector {
                 display: flex;
                 align-items: center;
@@ -233,8 +229,8 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo" aria-label="GABOIL ENERGY Home">
-                <img src="images/gabioil.jpg" alt="GABOIL ENERGY Logo" class="logo-img">
+            <a href="index.html" class="logo" aria-label="GabOil Energy Home">
+                <img src="images/gabioil.jpg" alt="GabOil Energy Logo" class="logo-img">
             </a>
             <div class="menu-toggle" id="mobile-menu">
                 ☰
@@ -282,7 +278,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2 data-translate="ourStory">Our Story</h2>
-                    <p data-translate="ourStoryText1">Founded in 2000, GABOIL ENERGY has grown from a small local service provider to a global leader
+                    <p data-translate="ourStoryText1">Founded in 2000, GabOil Energy has grown from a small local service provider to a global leader
                         in petroleum industry solutions. Our journey began with a simple mission: to provide reliable,
                         efficient, and safe services to the oil and gas sector.</p>
                     <p data-translate="ourStoryText2">Over the years, we've expanded our expertise and capabilities, always maintaining our commitment
@@ -441,7 +437,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3 data-translate="footerCompanyName">GABOIL ENERGY</h3>
+                    <h3 data-translate="footerCompanyName">GabOil Energy</h3>
                     <p data-translate="footerDesc">Leading provider of innovative solutions for the petroleum industry, committed to excellence,
                         safety, and sustainability.</p>
                     <div class="social-icons">
@@ -482,7 +478,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-translate="copyright">&copy; 2025 GABOIL ENERGY. All Rights Reserved.</p>
+                <p data-translate="copyright">&copy; 2025 GabOil Energy. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

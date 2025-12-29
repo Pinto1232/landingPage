@@ -53,7 +53,7 @@ const translations = {
     // About Section (Index)
     aboutTitle: "25 Years of Excellence in Petroleum Services",
     aboutText1:
-      "Since our founding in 2000, GABOIL ENERGY has been at the forefront of innovation in the petroleum industry. Our team of highly skilled engineers, technicians, and industry experts work tirelessly to provide solutions that drive efficiency and sustainability.",
+      "Since our founding in 2000, GabOil Energy has been at the forefront of innovation in the petroleum industry. Our team of highly skilled engineers, technicians, and industry experts work tirelessly to provide solutions that drive efficiency and sustainability.",
     aboutText2:
       "We pride ourselves on our commitment to safety, environmental responsibility, and technological advancement. Our global presence enables us to serve clients across multiple continents, providing localized expertise with global standards.",
     globalClients: "Global Clients",
@@ -63,12 +63,12 @@ const translations = {
     // Testimonials Section
     testimonialsTitle: "What Our Clients Say",
     testimonialsSubtitle:
-      "Hear from our satisfied clients about their experience working with GABOIL ENERGY",
+      "Hear from our satisfied clients about their experience working with GabOil Energy",
     testimonial1:
-      "GABOIL ENERGY's expertise in drilling operations has significantly improved our efficiency and safety standards. Their team's dedication to excellence is unmatched.",
+      "GabOil Energy's expertise in drilling operations has significantly improved our efficiency and safety standards. Their team's dedication to excellence is unmatched.",
     testimonial1Role: "Operations Manager, Global Oil Co.",
     testimonial2:
-      "The environmental compliance solutions provided by GABOIL ENERGY have helped us maintain our sustainability goals while optimizing our operations. Highly recommended!",
+      "The environmental compliance solutions provided by GabOil Energy have helped us maintain our sustainability goals while optimizing our operations. Highly recommended!",
     testimonial2Role: "Environmental Director, EcoPetrol",
     testimonial3:
       "Their equipment maintenance services have reduced our downtime by 40% and significantly improved our operational efficiency. A true partner in our success.",
@@ -84,14 +84,23 @@ const translations = {
     newsSubtitle:
       "Stay informed about our latest achievements and industry developments",
     news1Title: "New Environmental Compliance Initiative",
+    news1Date: "March 15, 2025",
     news1Text:
-      "GABOIL ENERGY launches innovative program to help clients achieve carbon neutrality goals...",
+      "GabOil Energy launches innovative program to help clients achieve carbon neutrality goals...",
+    news1FullText:
+      "GabOil Energy is proud to announce the launch of our comprehensive Environmental Compliance Initiative. This innovative program is designed to help our clients achieve their carbon neutrality goals while maintaining operational efficiency. Our team of environmental experts has developed cutting-edge solutions that integrate seamlessly with existing operations, reducing carbon footprint by up to 40%. The initiative includes real-time monitoring systems, sustainable practices training, and customized compliance strategies tailored to each client's unique needs. We are committed to supporting the petroleum industry's transition to more sustainable practices.",
     news2Title: "Advanced Drilling Technology Partnership",
+    news2Date: "March 10, 2025",
     news2Text:
       "We announce strategic partnership with leading technology provider to enhance drilling operations...",
+    news2FullText:
+      "GabOil Energy is excited to announce a strategic partnership with a leading global technology provider to revolutionize drilling operations. This collaboration brings together decades of industry expertise with cutting-edge technological innovation. The partnership focuses on developing advanced drilling systems that increase efficiency, reduce operational costs, and enhance safety standards. Our combined efforts will deliver state-of-the-art solutions that enable our clients to optimize their drilling operations while minimizing environmental impact. This partnership represents a significant milestone in our commitment to providing world-class services to the petroleum industry.",
     news3Title: "Safety Training Program Expansion",
+    news3Date: "March 5, 2025",
     news3Text:
       "Our award-winning safety training program expands to three new international locations...",
+    news3FullText:
+      "GabOil Energy is expanding its award-winning Safety Training Program to three new international locations. Our comprehensive safety training initiative has been recognized globally for its effectiveness in reducing workplace incidents and improving safety culture. The expansion will bring our proven training methodologies to new markets, including advanced modules on emergency response, hazard identification, and risk management. Each training program is customized to meet local regulatory requirements and industry standards. Our experienced instructors combine theoretical knowledge with practical, hands-on training to ensure participants are fully prepared to maintain the highest safety standards in their operations.",
     readMore: "Read More",
 
     // CTA Section
@@ -106,7 +115,7 @@ const translations = {
     servicesPageSubtitle: "Comprehensive solutions for the petroleum industry's most challenging needs",
     servicesPageHeader: "Our Services",
     servicesPageDescription: "We provide comprehensive solutions tailored to the unique challenges of the petroleum industry.",
-    servicesOverviewText: "At GABOIL ENERGY, we understand the complexities of the petroleum industry. Our comprehensive service portfolio is designed to address every aspect of your operations, from exploration and drilling to maintenance and compliance.",
+    servicesOverviewText: "At GabOil Energy, we understand the complexities of the petroleum industry. Our comprehensive service portfolio is designed to address every aspect of your operations, from exploration and drilling to maintenance and compliance.",
     serviceHighlights: "Service Highlights",
     serviceHighlightsDesc: "Quick overview of our core service offerings",
     keyBenefits: "Key Benefits",
@@ -161,7 +170,7 @@ const translations = {
     aboutPageSubtitle: "25 years of excellence in petroleum industry services",
     aboutPageHeader: "About Us",
     ourStory: "Our Story",
-    ourStoryText1: "Founded in 2000, GABOIL ENERGY has grown from a small local service provider to a global leader in petroleum industry solutions. Our journey began with a simple mission: to provide reliable, efficient, and safe services to the oil and gas sector.",
+    ourStoryText1: "Founded in 2000, GabOil Energy has grown from a small local service provider to a global leader in petroleum industry solutions. Our journey began with a simple mission: to provide reliable, efficient, and safe services to the oil and gas sector.",
     ourStoryText2: "Over the years, we've expanded our expertise and capabilities, always maintaining our commitment to quality and innovation. Today, we serve clients across multiple continents, helping them navigate the complex challenges of the modern petroleum industry.",
     missionValues: "Our Mission & Values",
     missionValuesSubtitle: "Guiding principles that drive our success",
@@ -231,10 +240,10 @@ const translations = {
     footerServices: "Services",
     careers: "Careers",
     footerContact: "Contact Info",
-    copyright: "© 2025 GABOIL ENERGY. All Rights Reserved.",
+    copyright: "© 2025 GabOil Energy. All Rights Reserved.",
 
     // Footer - Company Info
-    footerCompanyName: "GABOIL ENERGY",
+    footerCompanyName: "GabOil Energy",
     footerHome: "Home",
     footerAboutUs: "About Us",
 
@@ -305,7 +314,7 @@ const translations = {
     // About Section (Index)
     aboutTitle: "25 Anos de Excelência em Serviços Petrolíferos",
     aboutText1:
-      "Desde nossa fundação em 2000, a GABOIL ENERGY tem estado na vanguarda da inovação na indústria petrolífera. Nossa equipe de engenheiros, técnicos e especialistas altamente qualificados trabalha incansavelmente para fornecer soluções que impulsionam a eficiência e a sustentabilidade.",
+      "Desde nossa fundação em 2000, a GabOil Energy tem estado na vanguarda da inovação na indústria petrolífera. Nossa equipe de engenheiros, técnicos e especialistas altamente qualificados trabalha incansavelmente para fornecer soluções que impulsionam a eficiência e a sustentabilidade.",
     aboutText2:
       "Temos orgulho de nosso compromisso com a segurança, responsabilidade ambiental e avanço tecnológico. Nossa presença global nos permite atender clientes em vários continentes, fornecendo expertise local com padrões globais.",
     globalClients: "Clientes Globais",
@@ -315,12 +324,12 @@ const translations = {
     // Testimonials Section
     testimonialsTitle: "O Que Nossos Clientes Dizem",
     testimonialsSubtitle:
-      "Ouça nossos clientes satisfeitos sobre sua experiência com a GABOIL ENERGY",
+      "Ouça nossos clientes satisfeitos sobre sua experiência com a GabOil Energy",
     testimonial1:
-      "A expertise da GABOIL ENERGY em operações de perfuração melhorou significativamente nossa eficiência e padrões de segurança. A dedicação de sua equipe à excelência é incomparável.",
+      "A expertise da GabOil Energy em operações de perfuração melhorou significativamente nossa eficiência e padrões de segurança. A dedicação de sua equipe à excelência é incomparável.",
     testimonial1Role: "Gerente de Operações, Global Oil Co.",
     testimonial2:
-      "As soluções de conformidade ambiental fornecidas pela GABOIL ENERGY nos ajudaram a manter nossas metas de sustentabilidade enquanto otimizamos nossas operações. Altamente recomendado!",
+      "As soluções de conformidade ambiental fornecidas pela GabOil Energy nos ajudaram a manter nossas metas de sustentabilidade enquanto otimizamos nossas operações. Altamente recomendado!",
     testimonial2Role: "Diretor Ambiental, EcoPetrol",
     testimonial3:
       "Seus serviços de manutenção de equipamentos reduziram nosso tempo de inatividade em 40% e melhoraram significativamente nossa eficiência operacional. Um verdadeiro parceiro em nosso sucesso.",
@@ -336,14 +345,23 @@ const translations = {
     newsSubtitle:
       "Mantenha-se informado sobre nossas últimas conquistas e desenvolvimentos do setor",
     news1Title: "Nova Iniciativa de Conformidade Ambiental",
+    news1Date: "15 de Março de 2025",
     news1Text:
-      "GABOIL ENERGY lança programa inovador para ajudar clientes a alcançar metas de neutralidade de carbono...",
+      "GabOil Energy lança programa inovador para ajudar clientes a alcançar metas de neutralidade de carbono...",
+    news1FullText:
+      "A GabOil Energy tem o prazer de anunciar o lançamento de nossa Iniciativa Abrangente de Conformidade Ambiental. Este programa inovador foi projetado para ajudar nossos clientes a alcançar suas metas de neutralidade de carbono, mantendo a eficiência operacional. Nossa equipe de especialistas ambientais desenvolveu soluções de ponta que se integram perfeitamente às operações existentes, reduzindo a pegada de carbono em até 40%. A iniciativa inclui sistemas de monitoramento em tempo real, treinamento em práticas sustentáveis e estratégias de conformidade personalizadas para as necessidades únicas de cada cliente. Estamos comprometidos em apoiar a transição da indústria petrolífera para práticas mais sustentáveis.",
     news2Title: "Parceria em Tecnologia Avançada de Perfuração",
+    news2Date: "10 de Março de 2025",
     news2Text:
       "Anunciamos parceria estratégica com fornecedor líder de tecnologia para aprimorar operações de perfuração...",
+    news2FullText:
+      "A GabOil Energy tem o prazer de anunciar uma parceria estratégica com um fornecedor de tecnologia global líder para revolucionar as operações de perfuração. Esta colaboração reúne décadas de expertise da indústria com inovação tecnológica de ponta. A parceria se concentra no desenvolvimento de sistemas de perfuração avançados que aumentam a eficiência, reduzem custos operacionais e aprimoram os padrões de segurança. Nossos esforços combinados entregarão soluções de última geração que permitem aos nossos clientes otimizar suas operações de perfuração, minimizando o impacto ambiental. Esta parceria representa um marco significativo em nosso compromisso de fornecer serviços de classe mundial à indústria petrolífera.",
     news3Title: "Expansão do Programa de Treinamento de Segurança",
+    news3Date: "5 de Março de 2025",
     news3Text:
       "Nosso premiado programa de treinamento de segurança se expande para três novas localidades internacionais...",
+    news3FullText:
+      "A GabOil Energy está expandindo seu premiado Programa de Treinamento de Segurança para três novas localidades internacionais. Nossa iniciativa abrangente de treinamento de segurança foi reconhecida globalmente por sua eficácia na redução de incidentes no local de trabalho e na melhoria da cultura de segurança. A expansão trará nossas metodologias de treinamento comprovadas para novos mercados, incluindo módulos avançados sobre resposta a emergências, identificação de perigos e gerenciamento de riscos. Cada programa de treinamento é personalizado para atender aos requisitos regulatórios locais e aos padrões da indústria. Nossos instrutores experientes combinam conhecimento teórico com treinamento prático e prático para garantir que os participantes estejam totalmente preparados para manter os mais altos padrões de segurança em suas operações.",
     readMore: "Leia Mais",
 
     // CTA Section
@@ -358,7 +376,7 @@ const translations = {
     servicesPageSubtitle: "Soluções abrangentes para os desafios mais complexos da indústria petrolífera",
     servicesPageHeader: "Nossos Serviços",
     servicesPageDescription: "Fornecemos soluções abrangentes adaptadas aos desafios únicos da indústria petrolífera.",
-    servicesOverviewText: "Na GABOIL ENERGY, entendemos as complexidades da indústria petrolífera. Nosso portfólio abrangente de serviços foi projetado para abordar todos os aspectos de suas operações, desde exploração e perfuração até manutenção e conformidade.",
+    servicesOverviewText: "Na GabOil Energy, entendemos as complexidades da indústria petrolífera. Nosso portfólio abrangente de serviços foi projetado para abordar todos os aspectos de suas operações, desde exploração e perfuração até manutenção e conformidade.",
     serviceHighlights: "Destaques de Serviços",
     serviceHighlightsDesc: "Visão geral rápida de nossas ofertas de serviços principais",
     keyBenefits: "Benefícios Principais",
@@ -413,7 +431,7 @@ const translations = {
     aboutPageSubtitle: "25 anos de excelência em serviços da indústria petrolífera",
     aboutPageHeader: "Sobre Nós",
     ourStory: "Nossa História",
-    ourStoryText1: "Fundada em 2000, a GABOIL ENERGY cresceu de um pequeno provedor de serviços local para uma líder global em soluções da indústria petrolífera. Nossa jornada começou com uma missão simples: fornecer serviços confiáveis, eficientes e seguros ao setor de petróleo e gás.",
+    ourStoryText1: "Fundada em 2000, a GabOil Energy cresceu de um pequeno provedor de serviços local para uma líder global em soluções da indústria petrolífera. Nossa jornada começou com uma missão simples: fornecer serviços confiáveis, eficientes e seguros ao setor de petróleo e gás.",
     ourStoryText2: "Ao longo dos anos, expandimos nossa expertise e capacidades, sempre mantendo nosso compromisso com qualidade e inovação. Hoje, servimos clientes em vários continentes, ajudando-os a navegar pelos desafios complexos da indústria petrolífera moderna.",
     missionValues: "Nossa Missão e Valores",
     missionValuesSubtitle: "Princípios orientadores que impulsionam nosso sucesso",
@@ -483,10 +501,10 @@ const translations = {
     footerServices: "Serviços",
     careers: "Carreiras",
     footerContact: "Informações de Contato",
-    copyright: "© 2025 GABOIL ENERGY. Todos os Direitos Reservados.",
+    copyright: "© 2025 GabOil Energy. Todos os Direitos Reservados.",
 
     // Footer - Company Info
-    footerCompanyName: "GABOIL ENERGY",
+    footerCompanyName: "GabOil Energy",
     footerHome: "Início",
     footerAboutUs: "Sobre Nós",
 

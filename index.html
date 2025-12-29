@@ -62,7 +62,7 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "GABOIL ENERGY",
+      "name": "GabOil Energy",
       "image": "https://gaboilenergy.com/images/worker.png",
       "description": "Petroleum industry services provider specializing in drilling operations, equipment maintenance, and environmental compliance",
       "address": {
@@ -125,86 +125,83 @@
             }
 
             /* Mobile Navigation Menu */
-            /* Top Navbar with Logo and Hamburger */
-            .navbar .container {
-                flex-direction: column;
-                padding: 0;
-            }
-
-            .navbar .container::before {
-                content: '';
-                display: block;
-                height: 60px;
-                /* Space for the top bar */
-            }
-
-            /* Create a flex container for logo and menu toggle */
-            .navbar::after {
-                content: '';
-                display: block;
-                clear: both;
-            }
-
-            /* Position the logo and hamburger in a flex container */
-            .navbar .logo-menu-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+            .navbar {
                 position: fixed;
                 top: 0;
                 left: 0;
                 right: 0;
-                padding: 15px;
+                z-index: 1000;
                 background: white;
-                z-index: 1001;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-            /* Add the container in JavaScript */
+            .navbar .container {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 20px;
+                background: white;
+            }
+
             .navbar .logo {
+                display: block !important;
                 font-size: 22px;
             }
 
-            .navbar .menu-toggle {
-                font-size: 24px;
-                cursor: pointer;
-                padding: 5px;
+            .navbar .logo-img {
+                height: 40px;
+                width: auto;
             }
 
-            /* Grid layout for menu items */
+            .navbar .menu-toggle {
+                display: block !important;
+                font-size: 28px;
+                cursor: pointer;
+                padding: 5px 10px;
+                background: none;
+                border: none;
+                color: #333;
+            }
+
+            /* Hide the dynamically created container */
+            .navbar .logo-menu-container {
+                display: none !important;
+            }
+
+            /* Menu items - hidden by default */
             .nav-links {
-                display: grid !important;
-                grid-template-columns: repeat(4, 1fr);
+                position: fixed !important;
+                top: 70px;
+                left: 0;
+                right: 0;
                 width: 100%;
-                padding: 15px !important;
+                padding: 20px !important;
                 gap: 10px;
                 background-color: white;
+                display: none !important;
+                flex-direction: column;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                z-index: 999;
             }
 
             .nav-links.active {
+                display: flex !important;
                 opacity: 1;
                 visibility: visible;
-                transform: translateY(0);
-                grid-template-columns: repeat(4, 1fr);
             }
 
             .nav-links li {
                 margin: 0 !important;
                 text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                width: 100%;
+                padding: 5px 0;
             }
 
             .nav-links a {
-                padding: 10px 5px;
+                padding: 12px 15px;
                 width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-size: 0.95rem;
+                display: block;
+                font-size: 1rem;
                 font-weight: 500;
                 transition: all 0.3s ease;
                 color: #333;
@@ -216,13 +213,12 @@
                 font-weight: 600;
             }
 
-            /* Place language selector at the end of the grid */
+            /* Language selector styling for mobile */
             .language-selector {
-                grid-column: span 4;
                 margin-top: 10px;
+                width: 100%;
             }
 
-            /* Modern flag styling for mobile */
             .language-selector {
                 display: flex;
                 align-items: center;
@@ -322,8 +318,8 @@
     <!-- Navigation Bar -->
     <nav class="navbar" aria-label="Main navigation">
         <div class="container">
-            <a href="index.html" class="logo" aria-label="GABOIL ENERGY Home">
-                <img src="images/gabioil.jpg" alt="GABOIL ENERGY Logo" class="logo-img">
+            <a href="index.html" class="logo" aria-label="GabOil Energy Home">
+                <img src="images/gabioil.jpg" alt="GabOil Energy Logo" class="logo-img">
             </a>
             <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" aria-expanded="false">
                 ☰
@@ -599,7 +595,7 @@
                 <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle">
                     <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop')" role="img" aria-label="Environmental compliance initiative"></div>
                     <div class="news-content">
-                        <time class="news-date" datetime="2025-03-15" itemprop="datePublished">March 15, 2025</time>
+                        <time class="news-date" datetime="2025-03-15" itemprop="datePublished" data-translate="news1Date">March 15, 2025</time>
                         <h3 data-translate="news1Title" itemprop="headline">New Environmental Compliance Initiative</h3>
                         <p data-translate="news1Text" itemprop="description">GABOIL ENERGY launches innovative program to help clients achieve
                             carbon neutrality goals...</p>
@@ -609,7 +605,7 @@
                 <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle">
                     <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop')" role="img" aria-label="Advanced drilling technology partnership"></div>
                     <div class="news-content">
-                        <time class="news-date" datetime="2025-03-10" itemprop="datePublished">March 10, 2025</time>
+                        <time class="news-date" datetime="2025-03-10" itemprop="datePublished" data-translate="news2Date">March 10, 2025</time>
                         <h3 data-translate="news2Title" itemprop="headline">Advanced Drilling Technology Partnership</h3>
                         <p data-translate="news2Text" itemprop="description">We announce strategic partnership with leading technology provider
                             to enhance drilling
@@ -620,7 +616,7 @@
                 <article class="news-card" itemscope itemtype="https://schema.org/NewsArticle">
                     <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop')" role="img" aria-label="Safety training program expansion"></div>
                     <div class="news-content">
-                        <time class="news-date" datetime="2025-03-05" itemprop="datePublished">March 5, 2025</time>
+                        <time class="news-date" datetime="2025-03-05" itemprop="datePublished" data-translate="news3Date">March 5, 2025</time>
                         <h3 data-translate="news3Title" itemprop="headline">Safety Training Program Expansion</h3>
                         <p data-translate="news3Text" itemprop="description">Our award-winning safety training program expands to three new
                             international locations...</p>
@@ -630,6 +626,20 @@
             </div>
         </div>
     </section>
+
+    <!-- News Modal -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDate" class="modal-date"></p>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Call to Action Section -->
     <section class="cta">
@@ -651,13 +661,13 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3 data-translate="footerCompanyName">GABOIL ENERGY</h3>
+                    <h3 data-translate="footerCompanyName">GabOil Energy</h3>
                     <p data-translate="footerDesc">Leading provider of innovative solutions for the petroleum industry, committed to excellence,
                         safety, and sustainability.</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/gaboilenergy" class="social-icon" aria-label="GABOIL ENERGY on Facebook">f</a>
-                        <a href="https://www.twitter.com/gaboilenergy" class="social-icon" aria-label="GABOIL ENERGY on Twitter">t</a>
-                        <a href="https://www.linkedin.com/company/gaboilenergy" class="social-icon" aria-label="GABOIL ENERGY on LinkedIn">in</a>
+                        <a href="https://www.facebook.com/gaboilenergy" class="social-icon" aria-label="GabOil Energy on Facebook">f</a>
+                        <a href="https://www.twitter.com/gaboilenergy" class="social-icon" aria-label="GabOil Energy on Twitter">t</a>
+                        <a href="https://www.linkedin.com/company/gaboilenergy" class="social-icon" aria-label="GabOil Energy on LinkedIn">in</a>
                         <a href="https://www.instagram.com/gaboilenergy" class="social-icon" aria-label="GABOIL ENERGY on Instagram">ig</a>
                     </div>
                 </div>

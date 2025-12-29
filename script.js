@@ -310,3 +310,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// News Modal Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("newsModal");
+  const closeBtn = document.querySelector(".close");
+  const readMoreLinks = document.querySelectorAll(".read-more");
+
+  // News data mapping
+  const newsData = {
+    0: { titleKey: "news1Title", dateKey: "news1Date", descKey: "news1FullText" },
+    1: { titleKey: "news2Title", dateKey: "news2Date", descKey: "news2FullText" },
+    2: { titleKey: "news3Title", dateKey: "news3Date", descKey: "news3FullText" },
+  };
+
+  // Add click event to each "Read More" link
+  readMoreLinks.forEach((link, index) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // Get the news card
+      const newsCard = link.closest(".news-card");
+      if (!newsCard) return;
+
+      // Get title, date, and description from the card
+      const titleElement = newsCard.querySelector("h3");
+      const dateElement = newsCard.querySelector(".news-date");
+      const descElement = newsCard.querySelector(".news-content p");
+
+      const title = titleElement ? titleElement.textContent : "";
+      const date = dateElement ? dateElement.textContent : "";
+      const description = descElement ? descElement.textContent : "";
+
+      // Get full description from translations
+      const fullDescKey = newsData[index]?.descKey;
+      let fullDescription = description;
+
+      if (fullDescKey && translations && translations[currentLang]) {
+        fullDescription = translations[currentLang][fullDescKey] || description;
+      }
+
+      // Populate modal
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalDate").textContent = date;
+      document.getElementById("modalDescription").textContent = fullDescription;
+
+      // Show modal
+      modal.style.display = "block";
+    });
+  });
+
+  // Close modal when close button is clicked
+  if (closeBtn) {
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  }
+
+  // Close modal when clicking outside of it
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+    }
+  });
+});
