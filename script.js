@@ -1,53 +1,15 @@
-// Mobile Menu Setup
+// Mobile Menu Toggle
 document.addEventListener("DOMContentLoaded", function () {
-  // Create a container for the logo and menu toggle on mobile
-  if (window.innerWidth <= 768) {
-    const navbar = document.querySelector(".navbar");
-    const container = navbar.querySelector(".container");
-    const logo = container.querySelector(".logo");
-    const menuToggle = container.querySelector("#mobile-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navLinks = document.getElementById("nav-links");
 
-    // Create the container for logo and menu toggle
-    const logoMenuContainer = document.createElement("div");
-    logoMenuContainer.className = "logo-menu-container";
-
-    // Move the logo and menu toggle into this container
-    if (logo && menuToggle) {
-      // Clone the elements to avoid any reference issues
-      const logoClone = logo.cloneNode(true);
-      const menuToggleClone = menuToggle.cloneNode(true);
-
-      // Add them to the new container
-      logoMenuContainer.appendChild(logoClone);
-      logoMenuContainer.appendChild(menuToggleClone);
-
-      // Add the container to the navbar
-      navbar.insertBefore(logoMenuContainer, container);
-
-      // Hide the original elements
-      logo.style.display = "none";
-      menuToggle.style.display = "none";
-
-      // Transfer the click event to the cloned menu toggle
-      menuToggleClone.addEventListener("click", () => {
-        const navLinks = document.getElementById("nav-links");
-        if (navLinks) {
-          navLinks.classList.toggle("active");
-        }
-      });
-    }
+  if (mobileMenu && navLinks) {
+    mobileMenu.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      mobileMenu.classList.toggle("active");
+    });
   }
 });
-
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById("mobile-menu");
-const navLinks = document.getElementById("nav-links");
-
-if (mobileMenu && navLinks) {
-  mobileMenu.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-}
 
 // Navbar Scroll Effect
 window.addEventListener("scroll", () => {
